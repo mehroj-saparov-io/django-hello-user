@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Verify Email{% endblock %}
+
+{% block content %}
+<div class="auth-card">
+    <h2>Email tasdiqlash</h2>
+
+    {% if error %}
+        <div class="error-box">{{ error }}</div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="code" placeholder="6 xonali kod" required>
+        <button class="btn btn-full">Tasdiqlash</button>
+    </form>
+</div>
+{% endblock %}
