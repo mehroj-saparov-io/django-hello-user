@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def home(request):
     return render(request, 'home.html')
 
@@ -11,6 +11,7 @@ def home(request):
 def register_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
+        email = request.POST.get('email')
         password = request.POST.get('password')
 
         if User.objects.filter(username=username).exists():
@@ -18,10 +19,17 @@ def register_view(request):
                 'error': 'Bu username allaqachon mavjud'
             })
 
+        if User.objects.filter(email=email).exists():
+            return render(request, 'register.html', {
+                'error': 'Bu email allaqachon ro‘yxatdan o‘tgan'
+            })
+
         User.objects.create_user(
             username=username,
+            email=email,
             password=password
         )
+
         return redirect('login')
 
     return render(request, 'register.html')
