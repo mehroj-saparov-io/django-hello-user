@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="home-card">
+    {% if user.is_authenticated %}
+        <h1>Hello, {{ user.username }} 👋</h1>
+        <p class="subtitle">
+            Siz tizimga muvaffaqiyatli kirdingiz.
+        </p>
+
+        <div class="actions">
+            <a href="{% url 'logout' %}" class="btn btn-outline">Logout</a>
+        </div>
+    {% else %}
+        <h1>Welcome 👋</h1>
+        <p class="subtitle">
+            Davom etish uchun login yoki ro‘yxatdan o‘ting.
+        </p>
+
+        <div class="actions">
+            <a href="{% url 'login' %}" class="btn">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-outline">Register</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

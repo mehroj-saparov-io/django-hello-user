@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #333;
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.username {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Buttons */
+.btn {
+    background: #4f46e5;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #4f46e5;
+    color: #4f46e5;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    color: #777;
+    margin-top: 3rem;
+}
+
+/* Home Page */
+.home-card {
+    background: #fff;
+    padding: 2.5rem;
+    margin-top: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.home-card h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Auth Pages */
+.auth-card {
+    max-width: 420px;
+    margin: 4rem auto;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.auth-form {
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Error */
+.error-box {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 0.6rem;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Auth links */
+.auth-link {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+}
